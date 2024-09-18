@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body onLoad="setLocalStorage()">
+    <div class="header-container">
+        <div class="header-title">ROCK PAPER SCISSORS</div>
+        <div class="header-score">
+            <div class="computer">Computer score<br><span id="computer-score" class="score">0</span></div>
+            <div class="human">Your Score<br><span id="human-score" class="score">0</span></div>
+        </div>
+    </div>
+
+    <div class="spc-selection">
+        <button id="rock-btn" class="rock"><img src="./images/icons8-fist-67.png"></button>
+        <span id="line-1"><img src="./images/Line-1.png"></span>
+        <button id="paper-btn" class="paper"><img src="./images/icons8-hand-64.png"></button>
+        <span id="line-3"><img src="./images/Line-3.png"></span>
+        <button id="scissors-btn" class="scissors"><img src="./images/icons8-finger.png"></button>
+        <span id="line-2"><img src="./images/Line-2.png"></span>        
+        <button></button>
+    </div>
+
+    <div class="spc-game">
+        <div id="human-input"></div>
+        <div id="result-output"></div>
+        <div id="computer-input"></div>
+    </div>
+
+
+    <!-- <div class="rules" id="rules-container"><div class="rules-text">Game rules</div>
+        <button class="cross" id="cross"><i class="fa fa-close" style="font-size:24px;color:white"></i></button>
+        <ul class="rules-description">
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock</li>
+            <li>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or just "rock, paper, scissors."</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another han</li>
+        </ul>
+    </div> -->
+    <button id="rules-button">Rules</button>  
+    <button id="next-button">Next</button>    
+    <script src="script.js"></script>
+</body>
+</html>
