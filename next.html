@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurray Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="next-styles.css">
+</head>
+<body>
+    <canvas id="confetti"></canvas>
+        <div class="hurray-container">
+            <div class="hurray-animation"><img src="./images/Trophy.png"></div>
+            <div class="hurray-text">
+                <div class="hurray">HURRAY!!</div>
+                <div class="won">You won the game</div>
+                <button id="play-again-btn">Play Again</button>
+            </div>
+        </div>    
+        
+        <div class="rules" id="rules-container"><div class="rules-text">Game rules</div>
+            <button class="cross" id="cross"><i class="fa fa-close" style="font-size:24px;color:white"></i></button>
+            <ul class="rules-description">
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock</li>
+                <li>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or just "rock, paper, scissors."</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+
+        <button id="rules-button">Rules</button>
+    <script src="next-script.js"></script>
+    <script src="confetti.js"></script>
+</body>
+</html>

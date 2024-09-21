@@ -5,18 +5,23 @@ function setLocalStorage(){
     human_score.innerHTML = localStorage.getItem("human-score")
 };
 
-const rules = document.getElementById('rules-button');
+const rules = document.getElementById("rules-button");
 rules.addEventListener("click",()=>{
-    console.log("Hello");
-    const rule_text = document.getElementById("rules-container");
-    rule_text.style.display = "block";
-});
+    const rules_container = document.getElementById("rules-container");
+    console.log(rules_container);
+    rules_container.style.display = "block";
+})
 
-// const cross = document.getElementById("cross");
-// cross.addEventListener("click",()=>{
-//     const rule_text = document.getElementById("rules-container");
-//     rule_text.style.display = "none";
-// });
+const next = document.getElementById("next-button");
+next.addEventListener("click",()=>{
+    location.href='next.html';
+})
+
+const cross = document.getElementById("cross");
+cross.addEventListener("click",()=>{
+    const rule_text = document.getElementById("rules-container");
+    rule_text.style.display = "none";
+});
 
 const rock = document.getElementById("rock-btn");
 
@@ -35,18 +40,18 @@ const spcClick = () =>{
 const rockClick = () =>{
     const human_spc = document.getElementById("human-input");
     const computer_spc = document.getElementById("computer-input");
-    human_spc.innerHTML = `<div class="rock"><img src="./images/icons8-fist-67.png" alt="Rock"/></div>`;
+    human_spc.innerHTML = `<button class="rock"><img src="./images/icons8-fist-67.png" alt="Rock"/></button>`;
     const num = Math.floor(Math.random()*3);
     const result = document.getElementById("result-output");
     const human_score = document.getElementById("human-score");
     const computer_score = document.getElementById("computer-score"); 
     console.log(num);
     if(num == 0){
-        computer_spc.innerHTML = `<div class="rock"><img src="./images/icons8-fist-67.png" alt="Rock"/></div>`;
+        computer_spc.innerHTML = `<button class="rock"><img src="./images/icons8-fist-67.png" alt="Rock"/></button>`;
         result.innerHTML = "TIE UP<br><button id='play-again-btn' class='replay-btn'>REPLAY</button>";
     }
     else if(num == 1){
-        computer_spc.innerHTML = `<div class="paper"><img src="./images/icons8-hand-64.png" alt="Paper"/></div>`;
+        computer_spc.innerHTML = `<button class="paper"><img src="./images/icons8-hand-64.png" alt="Paper"/></button>`;
         result.innerHTML = "YOU LOST AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
         
         if(localStorage.getItem("computer-score" == null)){
@@ -58,8 +63,8 @@ const rockClick = () =>{
         computer_score.innerHTML = localStorage.getItem("computer-score");
     }
     else{
-        computer_spc.innerHTML = `<div class="scissors"><img src="./images/icons8-finger.png" alt="Scissors"/></div>`;        
-        result.innerHTML = "YOU WIN AGAINST PC<button id='play-again-btn'>PLAY AGAIN</button>";
+        computer_spc.innerHTML = `<button class="scissors"><img src="./images/icons8-finger.png" alt="Scissors"/></button>`;        
+        result.innerHTML = "YOU WIN AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
         const next = document.getElementById("next-button");
         const rules = document.getElementById("rules-button");
         next.style.display = "block";
@@ -91,19 +96,23 @@ const rockClick = () =>{
 const paperClick = () =>{
     const human_spc = document.getElementById("human-input");
     const computer_spc = document.getElementById("computer-input");
-    human_spc.innerHTML = `<div class="paper"><img src="./images/icons8-hand-64.png" alt="Paper"/></div>`;
+    human_spc.innerHTML = `<button class="paper"><img src="./images/icons8-hand-64.png" alt="Paper"/></button>`;
     const human_score = document.getElementById("human-score");
     const computer_score = document.getElementById("computer-score"); 
     const num = Math.floor(Math.random()*3);
     const result = document.getElementById("result-output");
     console.log(num);
     if(num == 0){
-        computer_spc.innerHTML = `<div class="paper"><img src="./images/icons8-hand-64.png" alt="Paper"/></div>`;
+        computer_spc.innerHTML = `<button class="paper"><img src="./images/icons8-hand-64.png" alt="Paper"/></button>`;
         result.innerHTML = "TIE UP<br><button id='play-again-btn' class='replay-btn'>REPLAY</button>";
     }
     else if(num == 1){
-        computer_spc.innerHTML = `<div class="rock"><img src="./images/icons8-fist-67.png" alt="Rock"/></div>`;
-        result.innerHTML = "YOU WIN AGAINST PC<button id='play-again-btn'>PLAY AGAIN</button>";
+        computer_spc.innerHTML = `<button class="rock"><img src="./images/icons8-fist-67.png" alt="Rock"/></button>`;
+        result.innerHTML = "YOU WIN AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
+        const next = document.getElementById("next-button");
+        const rules = document.getElementById("rules-button");
+        next.style.display = "block";
+        rules.style.right = "10%";        
         if(localStorage.getItem("human-score" == null)){
             localStorage.setItem("human-score",1);
         }
@@ -113,7 +122,7 @@ const paperClick = () =>{
         human_score.innerHTML = localStorage.getItem("human-score");
     }
     else{
-        computer_spc.innerHTML = `<div class="scissors"><img src="./images/icons8-finger.png" alt="Scissors"/></div>`;        
+        computer_spc.innerHTML = `<button class="scissors"><img src="./images/icons8-finger.png" alt="Scissors"/></button>`;        
         result.innerHTML = "YOU LOST AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
         if(localStorage.getItem("computer-score" == null)){
             localStorage.setItem("computer-score",1);
@@ -143,17 +152,21 @@ const scissorClick = () =>{
     const computer_spc = document.getElementById("computer-input");
     const human_score = document.getElementById("human-score");
     const computer_score = document.getElementById("computer-score"); 
-    human_spc.innerHTML = `<div class="scissors"><img src="./images/icons8-finger.png" alt="Scisssors"/></div>`;
+    human_spc.innerHTML = `<button class="scissors"><img src="./images/icons8-finger.png" alt="Scisssors"/></button>`;
     const num = Math.floor(Math.random()*3);
     const result = document.getElementById("result-output");
     console.log(num);
     if(num == 0){
-        computer_spc.innerHTML = `<div class="scisssors"><img src="./images/icons8-finger.png" alt="Scissor"></div>`;
+        computer_spc.innerHTML = `<button class="scissors"><img src="./images/icons8-finger.png" alt="Scissor"></button>`;
         result.innerHTML = "TIE UP<br><button id='play-again-btn' class='replay-btn'>REPLAY</button>";
     }
     else if(num == 1){
-        computer_spc.innerHTML = `<div class="paper"><img src="./images/icons8-hand-64.png" alt="Paper"/></div>`;
-        result.innerHTML = "YOU WIN AGAINST PC<button id='play-again-btn'>PLAY AGAIN</button>";
+        computer_spc.innerHTML = `<button class="paper"><img src="./images/icons8-hand-64.png" alt="Paper"/></button>`;
+        result.innerHTML = "YOU WIN AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
+        const next = document.getElementById("next-button");
+        const rules = document.getElementById("rules-button");
+        next.style.display = "block";
+        rules.style.right = "10%";
         if(localStorage.getItem("human-score" == null)){
             localStorage.setItem("human-score",1);
         }
@@ -163,7 +176,7 @@ const scissorClick = () =>{
         human_score.innerHTML = localStorage.getItem("human-score");
     }
     else{
-        computer_spc.innerHTML = `<div class="rock"><img src="./images/icons8-fist-67.png" alt="Rock"/></div>`;     
+        computer_spc.innerHTML = `<button class="rock"><img src="./images/icons8-fist-67.png" alt="Rock"/></button>`;     
         result.innerHTML = "YOU LOST AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
         if(localStorage.getItem("computer-score" == null)){
             localStorage.setItem("computer-score",1);            

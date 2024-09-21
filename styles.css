@@ -87,10 +87,6 @@ body{
     margin-left: 30%;
 }
 
-   
-
-
-
 .rock{
     border-radius: 50%;
     outline: 10px solid blue;
@@ -111,35 +107,51 @@ body{
 
 #paper-btn{
     position : absolute;
-    left: 10%;
+    left: 150px;
     top: 200px;
 }
 
 #scissors-btn{
     position : absolute;
-    left: 20%;
+    left: 300px;
 }
 
 #line-1{
     position: absolute;
-    left:5%;
-    top:1%;
+    top:20px;
+    width:200px;
+    left:85px
+}
+
+#line-1 img{
+    width:250px;
+    height:15px;
 }
 
 
 #line-2{
     position: absolute;
-    left:20%;
-    top:10%;
+    top:120px;
+    left:25px;
+    transform: rotate(60deg);
 }
 
+#line-2 img{
+    width:180px;
+    height:15px;
+}
 
 #line-3{
     position: absolute;
-    left:5%;
-    top:10%;
+    left:180px;
+    top:120px;
+    transform: rotate(-60deg);
 }
 
+#line-3 img{
+    height: 15px;
+    width: 200px;
+}
 
 .spc-game{
     display: flex;
@@ -149,13 +161,13 @@ body{
     color: white;
 }
 
-.spc-game #human-input{
+/* .spc-game #human-input{
     background-color: white;
-}
+} */
 
-.spc-game #computer-input{
+/* .spc-game #computer-input{
     background-color: white;
-}
+} */
 
 .spc-game #result-output{
     font-family: Roboto;
@@ -181,13 +193,12 @@ body{
 
 }
 
-
 #rules-button{
-    position:absolute;
+    position: absolute;
     border: 1px solid white;
     bottom : 5%;
-    right:1%;
-    width:8%;
+    right: 1%;
+    width: 8%;  
     border-radius: 5px;
     font-family: Roboto;
     font-size: 1em;
@@ -197,8 +208,50 @@ body{
     text-align: center;
     text-transform: uppercase;
     color:white;
-    background: transparent
+    background: transparent 
+}
 
+#rules-container{
+    display: none;
+    position: absolute;
+    background-color: #004429;
+    bottom: 10%;
+    right: 10px;
+    margin: 5px 0px;
+    border: 5px solid white;
+    color: white;
+    width : 300px;
+    height: 350px;
+}
+
+#rules-container .rules-text{
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    padding: 5% 10%;
+}
+
+#rules-container ul.rules-description{
+    list-style-type: square;
+}
+
+#rules-container ul.rules-description li{
+        color: white;
+        margin: 4% 10%;
+}
+
+#rules-container ul.rules-description li::marker{
+    color: #FFD600;
+    font-size: 1rem;
+}
+.cross{
+    position: absolute;
+    bottom : 320px;
+    right: 0px;
+    border-radius: 50%;
+    border: 1px white solid;
+    background-color: red;
 }
 
 #next-button{
@@ -220,51 +273,4 @@ body{
     color:white;
     background: transparent
 
-}
-
-
-.rules{
-    border: 5px solid white;
-    color: white;
-    width: 20%;
-    float: right;
-    background-color: #004429;
-    margin-right: 5%;
-}
-
-.rules .rules-text{
-    font-family: Roboto;
-    font-size: 29px;
-    font-weight: 500;
-    line-height: 33.98px;
-    text-align: center;
-    list-style-type: square;
-
-}
-
-.rules ul{
-    list-style-type: square;
-}
-
-
-.rules ul li{
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15.23px;
-    margin: 10px 10%;
-}
-
-
-.rules ul li::marker{
-    color: yellow;
-}
-
-.cross{
-    position: absolute;
-    bottom: 50%;
-    right: 4%;
-    border-radius: 50%;
-    border: white solid;
-    background-color: red;
 }
