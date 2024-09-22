@@ -2,11 +2,11 @@ function setLocalStorage(){
     const human_score = document.getElementById("human-score");
     const computer_score = document.getElementById("computer-score");
     
-    if(localStorage.getItem("computer-score" == null)){
+    if(localStorage.getItem("computer-score" == "NAN")){
         localStorage.setItem("computer-score",0);
     }  
     computer_score.innerHTML = localStorage.getItem("computer-score");
-    if(localStorage.getItem("human-score" == null)){
+    if(localStorage.getItem("human-score" == "NAN")){
         localStorage.setItem("humam-score",0);
     }   
     human_score.innerHTML = localStorage.getItem("human-score")
