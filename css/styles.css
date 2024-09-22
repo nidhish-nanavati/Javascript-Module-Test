@@ -101,19 +101,35 @@ body{
     outline: 10px solid #FFA943;
 }
 
-#rock-btn{
+
+.spc-selection #rock-btn{
     position : absolute;
 }
 
-#paper-btn{
+.spc-selection #paper-btn{
     position : absolute;
     left: 150px;
     top: 200px;
 }
 
-#scissors-btn{
+.spc-selection #scissors-btn{
     position : absolute;
     left: 300px;
+} 
+
+#rock-btn{
+    width: 100px;
+    height: 100px;
+}
+
+#paper-btn{
+    width: 100px;
+    height: 100px;
+}
+
+#scissors-btn{
+    width: 100px;
+    height: 100px;
 }
 
 #line-1{
@@ -156,14 +172,16 @@ body{
 .spc-game{
     display: flex;
     justify-content: space-evenly;
-    margin: 10% 10%;
-    width: 80%;
+    margin: 10% 15%;
+    width: 65%;
     color: white;
 }
 
-/* .spc-game #human-input{
-    background-color: white;
-} */
+ .spc-game #human-input{
+    border-radius:50%;
+    height: 100px;
+    width: 100px;
+}
 
 /* .spc-game #computer-input{
     background-color: white;
@@ -197,7 +215,7 @@ body{
     position: absolute;
     border: 1px solid white;
     bottom : 5%;
-    right: 1%;
+    right: 1%; 
     width: 8%;  
     border-radius: 5px;
     font-family: Roboto;
