@@ -6,7 +6,6 @@
 
 body{
     background-color:#8CC461;
-    ;
 }
 
 .header-container{
@@ -135,9 +134,9 @@ body{
 
 #line-1{
     position: absolute;
-    top:20px;
+    top:30px;
     width:200px;
-    left:85px
+    left:105px
 }
 
 #line-1 img{
@@ -148,26 +147,28 @@ body{
 
 #line-2{
     position: absolute;
-    top:120px;
-    left:25px;
-    transform: rotate(60deg);
+    top:126px;
+    left:62px;
+    transform: rotate(55deg);
 }
 
 #line-2 img{
-    width:180px;
+    width:146px;
     height:15px;
+    
 }
 
 #line-3{
     position: absolute;
     left:180px;
     top:120px;
-    transform: rotate(-60deg);
+    transform: rotate(-55deg);
 }
 
 #line-3 img{
     height: 15px;
-    width: 200px;
+    width: 140px;
+    transform: translate(0,42px);
 }
 
 .spc-game{
@@ -189,8 +190,8 @@ body{
     /* transform: translate(200px,-200px); */
     display: none;
     position: absolute;
-    top:405px;
-    left: 255px;
+    top:410px;
+    left: 251px;
     width: 200px;
     height: 200px;
     z-index: -1;
@@ -203,35 +204,30 @@ body{
 }
 
 #ring-1{
-    background-color: rgba(0,255,0,1);
+    background-color: rgba(10,134,10,1);
     width: 100px;
     height: 100px;
 }
 #ring-2{
-    background-color: rgba(0,255,0,0.8);
+    background-color: rgba(10,134,10,0.8);
     height: 150px;
     width: 150px;
 }
 #ring-3{
-    background-color: rgba(0,255,0,0.6);
+    background-color: rgba(10,134,10,0.6);
     width: 200px;
     height: 200px;
 }
 #ring-4{
-    background-color: rgba(0,255,0,0.4);
+    background-color: rgba(10,134,10,0.4);
     width: 250px;
     height: 250px;
 }
 #ring-5{
-    background-color: rgba(0,255,0,0.2);
+    background-color: rgba(10,134,10,0.2);
     width: 300px;
     height: 300px;
 }
-
-
-/* .spc-game #computer-input{
-    background-color: white;
-} */
 
 .spc-game #result-output{
     font-family: Roboto;
@@ -261,7 +257,7 @@ body{
     position: absolute;
     border: 1px solid white;
     bottom : 5%;
-    right: 1%; 
+    right: 1%;
     width: 8%;  
     border-radius: 5px;
     font-family: Roboto;

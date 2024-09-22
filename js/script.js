@@ -64,7 +64,7 @@ const rockClick = () =>{
 
         // logic to move circular rings.
         ring.style.display = "block";
-        ring.style.transform = "translate(770px,0px)";
+        ring.style.transform = "translate(777px,0px)";
 
         localStorage.setItem("computer-score",parseInt(localStorage.getItem("computer-score")) + 1);
         computer_score.innerHTML = localStorage.getItem("computer-score");
@@ -120,7 +120,7 @@ const paperClick = () =>{
         result.innerHTML = "YOU WIN AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
 
         ring.style.display = "block";
-        ring.style.transform = "translate(770px,0px)";
+        ring.style.transform = "unset";
 
         const next = document.getElementById("next-button");
         const rules = document.getElementById("rules-button");
@@ -135,7 +135,7 @@ const paperClick = () =>{
 
         // logic to move circular rings.
         ring.style.display = "block";
-        ring.style.transform = "translate(770px,0px)";
+        ring.style.transform = "translate(777px,0px)";
 
         if(localStorage.getItem("computer-score" == null)){
             localStorage.setItem("computer-score",1);
@@ -197,7 +197,7 @@ const scissorClick = () =>{
         result.innerHTML = "YOU LOST AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
         // logic to move circular rings.
         ring.style.display = "block";
-        ring.style.transform = "translate(770px,0px)";
+        ring.style.transform = "translate(777px,0px)";
 
 
         localStorage.setItem("computer-score",parseInt(localStorage.getItem("computer-score")) + 1);

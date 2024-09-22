@@ -105,10 +105,4 @@ function Confetti() {
   
   window.onload = function(){
     Confetti();
-    
-  //   window.resizeWindow = function() {
-  //     Confetti();
-  //   };
-  
-  //   window.addEventListener('resize', resizeWindow, false);
-  }
+}
