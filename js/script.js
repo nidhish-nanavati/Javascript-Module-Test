@@ -1,16 +1,16 @@
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function() { 
     const human_score = document.getElementById("human-score");
     const computer_score = document.getElementById("computer-score");
-    
-    if(localStorage.getItem("computer-score" == null)){
+    if(localStorage.getItem("computer-score") == null){
         localStorage.setItem("computer-score",0);
     }  
     computer_score.innerHTML = localStorage.getItem("computer-score");
-    if(localStorage.getItem("human-score" == null)){
+    if(localStorage.getItem("human-score") == null){
         localStorage.setItem("human-score",0);
     }   
     human_score.innerHTML = localStorage.getItem("human-score")
-};
+});
+
 
 const rules = document.getElementById("rules-button");
 rules.addEventListener("click",()=>{
@@ -60,13 +60,8 @@ const rockClick = () =>{
     else if(num == 1){
         computer_spc.innerHTML = `<button class="paper" id="paper-btn"><img src="./images/icons8-hand-64.png" alt="Paper"/></button>`;
         result.innerHTML = "YOU LOST AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
-        
-        if(localStorage.getItem("computer-score" == null)){
-            localStorage.setItem("computer-score",1);
-        }
-        else{
-            localStorage.setItem("computer-score",parseInt(localStorage.getItem("computer-score")) + 1);
-        }
+
+        localStorage.setItem("computer-score",parseInt(localStorage.getItem("computer-score")) + 1);
         computer_score.innerHTML = localStorage.getItem("computer-score");
     }
     else{
@@ -77,12 +72,7 @@ const rockClick = () =>{
         next.style.display = "block";
         rules.style.right = "10%";
 
-        if(localStorage.getItem("human-score" == null)){
-            localStorage.setItem("human-score",1);
-        }
-        else{
-            localStorage.setItem("human-score",parseInt(localStorage.getItem("human-score")) + 1);
-        }   
+        localStorage.setItem("human-score",parseInt(localStorage.getItem("human-score")) + 1);
         human_score.innerHTML = localStorage.getItem("human-score");        
     }
 
@@ -119,13 +109,8 @@ const paperClick = () =>{
         const next = document.getElementById("next-button");
         const rules = document.getElementById("rules-button");
         next.style.display = "block";
-        rules.style.right = "10%";        
-        if(localStorage.getItem("human-score" == null)){
-            localStorage.setItem("human-score",1);
-        }
-        else{
-            localStorage.setItem("human-score",parseInt(localStorage.getItem("human-score")) + 1);
-        }   
+        rules.style.right = "10%";
+        localStorage.setItem("human-score",parseInt(localStorage.getItem("human-score")) + 1);   
         human_score.innerHTML = localStorage.getItem("human-score");
     }
     else{
@@ -174,23 +159,15 @@ const scissorClick = () =>{
         const rules = document.getElementById("rules-button");
         next.style.display = "block";
         rules.style.right = "10%";
-        if(localStorage.getItem("human-score" == null)){
-            localStorage.setItem("human-score",1);
-        }
-        else{
-            localStorage.setItem("human-score",parseInt(localStorage.getItem("human-score")) + 1);
-        }   
+
+        localStorage.setItem("human-score",parseInt(localStorage.getItem("human-score")) + 1);  
         human_score.innerHTML = localStorage.getItem("human-score");
     }
     else{
         computer_spc.innerHTML = `<button class="rock" id="rock-btn"><img src="./images/icons8-fist-67.png" alt="Rock"/></button>`;     
         result.innerHTML = "YOU LOST AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
-        if(localStorage.getItem("computer-score" == null)){
-            localStorage.setItem("computer-score",1);            
-        }
-        else{
-            localStorage.setItem("computer-score",parseInt(localStorage.getItem("computer-score")) + 1);
-        }
+
+        localStorage.setItem("computer-score",parseInt(localStorage.getItem("computer-score")) + 1);
         computer_score.innerHTML = localStorage.getItem("computer-score");
     }
 
