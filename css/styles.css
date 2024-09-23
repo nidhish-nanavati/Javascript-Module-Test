@@ -135,7 +135,8 @@ body{
     position: absolute;
     top:30px;
     width:200px;
-    left:105px
+    left:105px;
+    z-index: -1;
 }
 
 #line-1 img{
@@ -149,12 +150,13 @@ body{
     top:126px;
     left:62px;
     transform: rotate(55deg);
+    z-index: -1;
 }
 
 #line-2 img{
     width:146px;
     height:15px;
-    
+    transform: translate(0,20px);
 }
 
 #line-3{
@@ -162,6 +164,7 @@ body{
     left:180px;
     top:120px;
     transform: rotate(-55deg);
+    z-index: -1;
 }
 
 #line-3 img{
