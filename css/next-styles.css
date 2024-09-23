@@ -106,6 +106,10 @@ body{
 #rules-container ul.rules-description{
     list-style-type: square;
     font-size: 14px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 15.23px;
+    text-align: left;
 }
 
 #rules-container ul.rules-description li{
