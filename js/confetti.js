@@ -3,11 +3,10 @@ function Confetti() {
     var canvas = document.getElementById("confetti");
     var ctx = canvas.getContext("2d");
   
-    //canvas dimensions
-    var W = window.innerWidth;
-    var H = window.innerHeight;
-    canvas.width = W;
-    canvas.height = H;
+    //canvas dimension
+    
+    canvas.width = 100;
+    canvas.height = 100;
     
     //particles
     var mp = 150; //max particles

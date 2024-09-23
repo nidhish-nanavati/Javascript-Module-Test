@@ -83,7 +83,6 @@ body{
 .spc-selection{
     position: relative;
     height: 100%;
-    width: 100%;
     margin-left: 30%;
 }
 
@@ -172,9 +171,10 @@ body{
 }
 
 .spc-game{
+    position: relative;
     display: flex;
     justify-content: space-evenly;
-    margin: 10% 15%;
+    margin: 8% 15%;
     width: 65%;
     color: white;
 }
@@ -190,12 +190,13 @@ body{
     /* transform: translate(200px,-200px); */
     display: none;
     position: absolute;
-    top:410px;
-    left: 251px;
+    top: 50px;
+    left: 50px;
     width: 200px;
     height: 200px;
     z-index: -1;
 }
+
 
 #ring-1, #ring-2, #ring-3, #ring-4, #ring-5{
     position: absolute;
@@ -253,10 +254,16 @@ body{
 
 }
 
+/* .rules-box{
+    position: fixed;
+    bottom : 5px;
+    right: 1%;    
+} */
+
 #rules-button{
-    position: absolute;
+    position: fixed;
     border: 1px solid white;
-    bottom : 5%;
+    bottom : 10px;
     right: 1%;
     width: 8%;  
     border-radius: 5px;
@@ -273,15 +280,16 @@ body{
 
 #rules-container{
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #004429;
-    bottom: 10%;
-    right: 10px;
+    bottom: 45px;
+    right: 2%;
     margin: 5px 0px;
     border: 5px solid white;
+    border-radius: 5px;
     color: white;
-    width : 300px;
-    height: 350px;
+    width : 250px;
+    height: 300px;
 }
 
 #rules-container .rules-text{
@@ -294,11 +302,12 @@ body{
 
 #rules-container ul.rules-description{
     list-style-type: square;
+    font-size: 14px;
 }
 
 #rules-container ul.rules-description li{
         color: white;
-        margin: 4% 10%;
+        margin: 2% 10%;
 }
 
 #rules-container ul.rules-description li::marker{
@@ -307,18 +316,18 @@ body{
 }
 .cross{
     position: absolute;
-    bottom : 320px;
-    right: 0px;
+    bottom : 280px;
+    right: -10px;
     border-radius: 50%;
     border: 1px white solid;
     background-color: red;
 }
 
 #next-button{
-    position:absolute;
+    position: fixed;
     display: none; 
     border: 1px solid white;
-    bottom : 5%;
+    bottom : 10px;
     right:10%;
     width:8%;
     transform: translate(120%,0);
