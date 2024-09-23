@@ -63,7 +63,7 @@ const rockClick = () =>{
     }
     else if(num == 1){
         computer_spc.innerHTML = `<button class="paper" id="paper-btn"><img src="./images/icons8-hand-64.png" alt="Paper"/></button>`;
-        result.innerHTML = "YOU LOST AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
+        result.innerHTML = "YOU LOST<div id='against-pc'>AGAINST PC</div><button id='play-again-btn'>PLAY AGAIN</button>";
 
         // logic to move circular rings.
         ring.style.display = "block";
@@ -75,7 +75,7 @@ const rockClick = () =>{
     }
     else{
         computer_spc.innerHTML = `<button class="scissors" id="scissors-btn"><img src="./images/icons8-finger.png" alt="Scissors"/></button>`;        
-        result.innerHTML = "YOU WIN AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
+        result.innerHTML = "YOU WIN <div id='against-pc'>AGAINST PC</div><button id='play-again-btn'>PLAY AGAIN</button>";
 
         ring.style.display = "block";
         ring.style.left = "50px";
@@ -127,7 +127,7 @@ const paperClick = () =>{
     }
     else if(num == 1){
         computer_spc.innerHTML = `<button class="rock" id="rock-btn"><img src="./images/icons8-fist-67.png" alt="Rock"/></button>`;
-        result.innerHTML = "YOU WIN AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
+        result.innerHTML = "YOU WIN <div id='against-pc'>AGAINST PC</div><button id='play-again-btn'>PLAY AGAIN</button>";
 
         ring.style.display = "block";
         ring.style.left = "50px";
@@ -142,7 +142,7 @@ const paperClick = () =>{
     }
     else{
         computer_spc.innerHTML = `<button class="scissors" id="scissors-btn"><img src="./images/icons8-finger.png" alt="Scissors"/></button>`;        
-        result.innerHTML = "YOU LOST AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
+        result.innerHTML = "YOU LOST <div id='against-pc'>AGAINST PC</div><button id='play-again-btn'>PLAY AGAIN</button>";
 
         // logic to move circular rings.
         ring.style.display = "block";
@@ -197,7 +197,7 @@ const scissorClick = () =>{
     }
     else if(num == 1){
         computer_spc.innerHTML = `<button class="paper" id="paper-btn"><img src="./images/icons8-hand-64.png" alt="Paper"/></button>`;
-        result.innerHTML = "YOU WIN AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
+        result.innerHTML = "YOU WIN <div id='against-pc'>AGAINST PC</div><button id='play-again-btn'>PLAY AGAIN</button>";
 
         // logic to move circular rings.
         ring.style.display = "block";
@@ -213,7 +213,7 @@ const scissorClick = () =>{
     }
     else{
         computer_spc.innerHTML = `<button class="rock" id="rock-btn"><img src="./images/icons8-fist-67.png" alt="Rock"/></button>`;     
-        result.innerHTML = "YOU LOST AGAINST PC<br><button id='play-again-btn'>PLAY AGAIN</button>";
+        result.innerHTML = "YOU LOST<div id='against-pc'>AGAINST PC</div><button id='play-again-btn'>PLAY AGAIN</button>";
         // logic to move circular rings.
         ring.style.display = "block";
         ring.style.left = "auto";

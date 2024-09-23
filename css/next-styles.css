@@ -44,11 +44,10 @@ body{
     text-transform: uppercase;
 }
 
-
 #play-again-btn{
     margin: 3% 0%;
     font-family: Roboto;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-align: center;
@@ -129,3 +128,5 @@ body{
     border: 1px white solid;
     background-color: red;
 }
+
+
